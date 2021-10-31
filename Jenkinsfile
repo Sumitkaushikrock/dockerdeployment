@@ -1,1 +1,3 @@
-echo "Hello fuicker"
+stage("Docker build"){
+   sh "docker build ."
+}
