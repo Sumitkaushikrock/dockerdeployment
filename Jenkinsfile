@@ -2,10 +2,10 @@ pipeline {
     agent none
     stages {
         stage('Fetch git repo and build docker image') {
-            agent { label 'docker-agent' }
+            agent { label 'docker-agent-1' }
             steps {
-/*                git credentialsId: 'first-repo', url: 'http://172.16.238.2:3000/git-user/first-repo.git'
-                sh 'docker build -t hello_py:1 .'*/
+                git scm
+                sh 'docker build -t myImage .'
                 sh 'docker images'
             }
         }
