@@ -5,7 +5,7 @@ pipeline {
             agent { label 'docker-agent-1' }
             steps {
                 sh 'git clone https://github.com/Sumitkaushikrock/dockerdeployment'
-                sh 'docker build -t myImage .'
+                sh 'docker build -t sumitkaushik445/dockerdeployment .'
                 sh 'docker images'
             }
         }
